@@ -7,7 +7,7 @@ GROUP BY s.supplier_name
 ORDER BY product_count DESC
 ;
 
-仕入先ごとの仕入商品数
+① 仕入先ごとの仕入商品数
 
 SELECT p.product_id,p.product_name,p.current_stock,
 SUM(pod.quantity) AS order_quantity
@@ -21,9 +21,9 @@ GROUP BY p.product_id,p.product_name,p.current_stock
 HAVING p.current_stock - SUM(pod.quantity) > 500
 ;
 
-残在庫数が出庫量に対し500を上回る場合入庫はしない
-現在庫と注文数量（現在発注中の商品のみ）を比較し、在庫が500以上残っている商品を抽出
-
+② 現在庫と注文数量（現在発注中の商品のみ）を比較し、在庫が500以上残っている商品を抽出
+(残在庫数が出庫量に対し500を上回る場合入庫はしない)
+  
 SELECT p.product_name,p.current_stock,
 SUM(pod.quantity) AS order_quantity,
 p.current_stock - SUM(pod.quantity) AS remaining_stock
@@ -37,7 +37,7 @@ GROUP BY p.product_id,p.product_name,p.current_stock
 ORDER BY remaining_stock
 ;
 
-現在庫から発注済み商品が出荷された（納品した）際の想定残在庫
+③ 現在庫から発注済み商品が出荷された（納品した）際の想定残在庫
 
 SELECT product_id,
 SUM(quantity) AS current_stock
@@ -53,8 +53,8 @@ WHERE stock_status = '出庫'
 GROUP BY product_id
 ;
 
-inventory_historyの履歴から算出した現在庫
-入出庫時に都度productsのcurrent_stockとlast_updatedを更新する
+④ inventory_historyの履歴から算出した現在庫
+(入出庫時に都度productsのcurrent_stockとlast_updatedを更新する)
 
 SELECT p.product_name,
 SUM(pod.quantity) AS total_order_quantity
@@ -69,4 +69,4 @@ GROUP BY p.product_name
 ORDER BY total_order_quantity DESC
 ;
 
-指定した月の合計納品数量
+⑤ 指定した月の合計納品数量
