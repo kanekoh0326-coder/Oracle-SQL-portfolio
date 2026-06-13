@@ -1,39 +1,39 @@
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,1,'商品A',1000,1000
+product_seq.NEXTVAL,1,'商品A',1000,900,TO_DATE('2026/01/04/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,2,'商品B',2000,2000
+product_seq.NEXTVAL,2,'商品B',2000,1800,TO_DATE('2026/01/04/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,3,'商品C',3000,3000
+product_seq.NEXTVAL,3,'商品C',3000,2700,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,4,'商品D',4000,4000
+product_seq.NEXTVAL,4,'商品D',4000,3600,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,5,'商品E',5000,5000
+product_seq.NEXTVAL,5,'商品E',5000,4500,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,1,'商品F',6000,6000
+product_seq.NEXTVAL,1,'商品F',6000,5400,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,2,'商品G',7000,7000
+product_seq.NEXTVAL,2,'商品G',7000,6300,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,3,'商品H',8000,8000
+product_seq.NEXTVAL,3,'商品H',8000,7200,TO_DATE('2026/01/05/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,4,'商品I',9000,9000
+product_seq.NEXTVAL,4,'商品I',9000,8100,TO_DATE('2026/01/06/01','YYYY/MM/DD/HH24')
 );
 
 INSERT INTO products VALUES(
-product_seq.NEXTVAL,5,'商品J',10000,10000
+product_seq.NEXTVAL,5,'商品J',10000,9000,TO_DATE('2026/01/06/01','YYYY/MM/DD/HH24')
 );
