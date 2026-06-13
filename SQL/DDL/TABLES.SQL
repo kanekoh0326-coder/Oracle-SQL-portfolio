@@ -12,6 +12,7 @@ ON DELETE SET NULL,
 product_name VARCHAR2(100) NOT NULL,
 price NUMBER,
 current_stock NUMBER
+last_updated DATE DEFAULT SYSDATE
 );
 
 CREATE TABLE purchase_orders (
