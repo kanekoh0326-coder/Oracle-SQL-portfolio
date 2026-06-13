@@ -1,5 +1,5 @@
 # Oracle-SQL-portfolio
--OracleDatabaseを利用したSQL学習成果物です
+- OracleDatabaseを利用したSQL学習成果物です
 
 ## 概要
 
